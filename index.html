@@ -51,8 +51,7 @@
     window.onload = getLastUpdatedTime;
 </script>
 
-
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Word count function ///////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
 
@@ -74,10 +73,10 @@
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const AnIntroductiontoStellarNucleosynthesisCount = displayWordCount("Introduction_InText");
-    const AnalysisandDiscussionCount = displayWordCount("Analysis_InText");
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = AnIntroductiontoStellarNucleosynthesisCount + AnalysisandDiscussionCount;
+    const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
@@ -85,6 +84,7 @@
   window.onload = displayTotalWordCount;
 </script>
 
+  
    
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Banner Function ///////////////////////////////// -->
@@ -207,7 +207,7 @@ p.ex1 {
 </head>
    
 <p>
-<p class="ex1">
+<p class="ex1" id="Introduction_InText">
 <pre>
    Sample Paragraph - to be deleted
    Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an
@@ -233,7 +233,7 @@ p.ex1 {
 </head>
    
 <p>
-<p class="ex1">
+<p class="ex1" id="Analysis_InText">
 <pre>
    (insert analysis text here/first paragraph)
 </pre>
