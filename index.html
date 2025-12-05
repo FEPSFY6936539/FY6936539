@@ -75,8 +75,11 @@
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AnalysisCount = displayWordCount("Analysis_InText");
+	const AnalysisCount = displayWordCount("Analysis_InText");
+	const DiscussionCount = displayWordCount("Discussion_InText");
+	const FigureCount = displayWordCount("Figure_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + DiscussionCount + FigureCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
@@ -162,11 +165,11 @@ p.ex1 {
 </tr>
 
 <tr>
-   <td><a href="#An Introduction to Stellar Nucleosynthesis">Introduction and Origins</td>
+   <td><a href="#Introduction and Origins">Introduction and Origins</td>
 </tr>
 
 <tr>
-   <td><a href="#Analysis and Discussion">Theory and Discussion</td>
+   <td><a href="#Theory and Discussion">Theory and Discussion</td>
 </tr>
 	
 <tr>
@@ -204,31 +207,25 @@ p.ex1 {
 
 <head>
    <hr>
-      <h3 id="An Introduction to Stellar Nucleosynthesis">An Introduction to Stellar Nucleosynthesis</h3>
+      <h3 id="Introduction and Origins">An Introduction to Nucleosynthesis</h3>
    <hr>
 </head>
    
 <p id="Introduction_InText">
-   Sample Paragraph - to be deleted
-   Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an
-   intelligent machine through the interaction of an oracle with the machine system, over a sequence of
-   learning epochs. A distinctive component in an active system is the querying strategy, used to sample
-   candidate training instances from a pool and evaluate them for informativeness, i.e., their potential
-   to improve the classification model. Various strategies have been proposed including; Query by
-   Committee (Seung et al., 1992), Monte Carlo estimation (Roy and McCallum, 2001), uncertainty
-   sampling (Lewis and Gale, 1994) and version space reduction (margin sampling) (Tong and Koller,
-   2001). Irrespective of how the most informative pattern instances are chosen at each epoch they are
-   presented for labeling, to a machine (database) or human oracle that has knowledge of the class
-   labels. After adding the newly labeled instances to the current training set, a revised model is
-   subsequently induced. A goal of this process is to achieve an efficient, incremental advancement of
-   learning at each epoch. The process is continued until some stopping criterion has been met, such as
-   reaching a stage where information from the selected instances is contrary to the model, causing the
-   classifier confidence to drop, as in Vlachos (2008).
+	The term nucleosynthesis is a concept that defines how the Universe evolved from a basic mixture of hydrogen and helium into a rich environment of elements that exist today. 
+	By tracing how different elements are produced in different stages of stellar evolution, scientists can build a clearer picture of how matter has changed over countless years
+	and how these changes relate to the modern world.
+	
+	Nucleosynthesis, stellar or otherwise, began immediately after the Big Bang, when the Universe was extremely hot and dense. At that time, only the very lightest elements 
+	(majorly hydrogen, helium and a miniscule abundance of lithium) were formed. Heavier elements could not emerge because of the Universe’s rapid expansion and cooling (Clayton, 2003).
+	The emersion of these would require much more extreme and sustained conditions, such as those found inside stars. A major breakthrough in grasping this process came about in
+	the mid-20th century from massively influential research that laid out a detailed description of how stars manufacture new elements throughout their lifetimes, forming the 
+	basis for the highly regarded modern theories of stellar evolution (Burbidge, Burbidge, Fowler and Hoyle, 1957). 
 </p>
   
 <head>
    <hr>
-      <h3 id="Analysis and Discussion">Analysis and Discussion</h3>
+      <h3 id="Theory and Discussion">Forging the Elements</h3>
    <hr>
 </head>
    
@@ -237,6 +234,17 @@ p.ex1 {
    (insert analysis text here/first paragraph)
 </p>
 
+<head>
+   <hr>
+      <h3 id="Applications and Utility">Applications and Utility</h3>
+   <hr>
+</head>
+   
+<p id="Discussion_InText">
+<!'ex1' function shifts pixels 250 to left (puts them in the middle of the page)
+   (insert analysis text here/first paragraph)
+</p>
+	
 <head>
    <hr>
       <h3 id="References">References</h3>
