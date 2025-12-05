@@ -50,42 +50,6 @@
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
-
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  <!-- ////////////////////////////// Word count function ///////////////////////////// -->
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
-
-<!-- Placeholder for total word count -->
-<p id="totalWordCount"></p>
-<hr>
-<script>
-  // Function to calculate and display word count for a specified section
-  function displayWordCount(sectionId, outputId) {
-    // Get the text content from the specified section
-    const text = document.getElementById(sectionId).textContent;
-    // Split text into words based on spaces and filter out any empty strings
-    const wordArray = text.trim().split(/\s+/);
-    // Count the words
-    const wordCount = wordArray.length;
-    // Return the word count for summing purposes
-    return wordCount;
-  }
-  // Function to calculate and display total word count from selected sections
-  function displayTotalWordCount() {
-    // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
-	const DiscussionCount = displayWordCount("Discussion_InText");
-	const FigureCount = displayWordCount("Figure_InText");
-    // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + FigureCount + AnalysisCount + DiscussionCount;
-    // Display the total word count
-    document.getElementById("totalWordCount").innerText = `Word Count: ${totalWordCount}`;
-  }
-  // Run the function for specific sections and display total count when the page loads
-  window.onload = displayTotalWordCount;
-</script>
-
   
    
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
@@ -245,7 +209,7 @@ p.ex1 {
 </head>
 
 <p id="Analysis_InText">
-<img src="hydrogen burning.png" alt="Figure2" style= "float:left;width:603px;height:810px;">
+<img src="hydrogen burning.png" alt="Figure2" style= "float:left;width:596px;height:800px;">
 	Element forging occurs in major stages, where the first is hydrogen burning: a process in which hydrogen nuclei fuse to form helium, releasing copious amounts of energy that allow a star to remain stable. In stars comparable to the Sun, this happens mainly through a proton-proton chain unlike stars of greater masses, where the carbon-nitrogen-oxygen cycle becomes the dominant chain <a href="#References">(Prialnik, 2009).</a> When the hydrogen in the core eventually fuses out, the internal temperature rises and stars begin helium burning instead. By the triple-alpha process, where three helium nuclei combine to form carbon, occasionally additional reactions within this can lead to the production of oxygen. Carbon and oxygen are among the most integral in shaping the chemistry of the Universe and are vital for the existence of life as we know it <a href="#References">(Kippenhahn, Weigert and Weiss, 2012).</a> At this stage, stars start to expand and cool at the surface, often becoming red giants.
 	<br /> <br />
 	In even greater masses of stars than previously mentioned, this process continues further in increasingly complex ways. After helium burning almost subsides, the core contracts further and reaches a large enough temperature to trigger carbon burning, which outcomes in elements such as neon, sodium and magnesium. As the temperature continues to rise, the star has potential to undergo neon burning and oxygen burning, each a stage that could yield heavier elements like silicon and sulphur. Ultimately, the star’s core ends with silicon burning, creating iron and nickel. Unlike lighter elements, fusion of iron does not result in the release of energy but absorbs it instead <a href="#References">(Hansen, Kawaler and Trimble, 2004).</a> As a star’s core is consequently iron abundant at the end of these mechanisms, it is unable to generate enough outward pressure to resist gravity, thus leading to its catastrophic collapse.
