@@ -313,7 +313,43 @@ Thielemann, F.K., Arnould, M. and Truran, J.W. (2011) ‘Nuclear Astrophysics an
 <br /><br />
 <a href="https://nsi.ir/wp-content/uploads/2023/10/Tokamaks.pdf">Wesson, J.A. (2004).</a> <i>Tokamaks.</i> 3rd ed. Clarendon Press – Oxford. (Accessed: 04 November 2025)
 </p> 
-   
+
+<br /> <br />
+
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ///////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
+	const DiscussionCount = displayWordCount("Discussion_InText");
+	const FigureCount = displayWordCount("Figure_InText");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + FigureCount + AnalysisCount + DiscussionCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Word Count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
+</script>
+	
 </body>
 
 </html>
